@@ -1,0 +1,19 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+  - url: /scraper
+    script: main.app
+    login: admin
+
+libraries:
+  - name: ssl
+    version: latest
+env_variables:
+  PROJECT_ID: providence-demo
+  LOCATION: global
+  KEYRING: storage
+  KEY: mykey
+  ENCRYPTED_BUCKET: mdh-prov-enc-bucket
+  SECRET: dark-sky-key
+  WEATHER_BUCKET: mdh-weather-bucket
